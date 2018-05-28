@@ -1,0 +1,19 @@
+.sorter > .view-mode .slider {
+}
+
+.products-grid .product-slider-info {
+    position: relative;
+    padding-bottom: 95px;
+    text-align: center;
+}
+
+.products-grid .product-image-slider {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #3399cc !important;
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/slider.css</stylesheet>
+            </action>
+            <block type="core/text" name="slider-css">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>]]></text>
+                </action>
+            </block>
+            <block type="core/text" name="slider-css-theme">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>]]></text>
+                </action>
+            </block>
+            <block type="core/text" name="jq-js">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>]]></text>
+                </action>
+                <action method="setText">
+                    <text>
+                        <![CDATA[<script>jQuery.noConflict();</script>]]></text>
+                </action>
+            </block>
+            <block type="core/text" name="slider-js">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>]]></text>
+                </action>
+            </block>
+
+        </reference>
+    </default>
+    <training_productlist_index_index>
+        <update handle="customer_account"/>
+
+        <reference name="content">
+            <block name="customer.productlist" type="training_productlist/container"
+                   template="productlist/container.phtml" as="productlist_container">
+                <action method="setTitle" translate="title">
+                    <title>Recommended Products</title>
+                </action>
+                <reference name="customer_account_navigation">
+                    <action method="setActive">
+                        <path>recommended_products</path>
+                    </action>
+                </reference>
+
+                <block name="customer.productlist.list" type="training_productlist/list"
+                       template="productlist/list.phtml" as="productlist_list">
+                    <block type="training_productlist/toolbar" name="product_list_toolbar"
+                           template="catalog/product/list/toolbar.phtml"/>
+                    <action method="setToolbarBlockName">
+                        <name>product_list_toolbar</name>
+                    </action>
+
+                </block>
+            </block>
+        </reference>
+
+    </training_productlist_index_index>
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label"
+                    module="training_productlist">
+                <name>productlist</name>
+                <path>recommended_products/</path>
+                <label>Recommended Products</label>
+            </action>
+        </reference>
+    </customer_account>
+</layout>

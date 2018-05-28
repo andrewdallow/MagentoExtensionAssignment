@@ -1,0 +1,41 @@
+version: "3.1"
+
+services:
+  webserver:
+    build: ./.docker/webserver
+    volumes:
+      - ./:/var/www/html
+    links:
+        - mysql
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      XDEBUG_CONFIG: remote_host=172.21.0.1
+  mysql:
+    image: mysql:5.6
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./.docker/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=magento
+      - MYSQL_USER=magento
+      - MYSQL_PASSWORD=magento
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      links:
+          - mysql:db
+      ports:
+          - "8000:80"
+      environment:
+          MYSQL_USER: magento
+          MYSQL_PASSWORD: magento
+          MYSQL_ROOT_PASSWORD: root
+#  composer:
+#    image: composer:latest
+#    command: install
+#    volumes:
+#      - ./:/var/www/html
