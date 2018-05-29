@@ -4,6 +4,18 @@ A Magento extension which displays a list of products chosen at the backend
 to any logged in customer in the My Account section of 
 the frontend. 
 
+## Installation
+Clone this repo into the Magento 1.9.x directory.
+
+If not using magento sample data and you wish to use docker, please delete
+the files in .docker/mysql before installation to remove the sample data entries. 
+
+Make sure to set the theme in 
+
+       System | Design | Add Design Change | Training/default
+
+otherwise the product-list will not be visible. 
+
 ## The handle_display Attribute
 
 A new attribute has been added to the catalog_product_entity called handle_display.
