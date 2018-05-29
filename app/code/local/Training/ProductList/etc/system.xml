@@ -12,6 +12,7 @@
                     <fields>
                         <max_products_shown>
                             <label>Number to List</label>
+                            <backend_model>training_productlist/numberToShowValidation</backend_model>
                             <sort_order>10</sort_order>
                             <frontend_type>text</frontend_type>
                             <show_in_default>1</show_in_default>

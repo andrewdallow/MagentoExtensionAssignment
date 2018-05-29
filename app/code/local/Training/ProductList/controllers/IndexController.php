@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Short description for class
+ * Index Controller
  *
- * Long description for class (if any)...
+ * Default Index controller for the recommended products list page.
  *
  * @category   Zend
  * @package    Zend_Training
@@ -17,6 +17,11 @@
 class Training_ProductList_IndexController
     extends Mage_Core_Controller_Front_Action
 {
+    /**
+     * Check customer is logged in before displaying pages.
+     *
+     * @return \Mage_Core_Controller_Front_Action|void
+     */
     public function preDispatch()
     {
         parent::preDispatch();
@@ -29,6 +34,9 @@ class Training_ProductList_IndexController
         
     }
     
+    /**
+     * Load and render the index page.
+     */
     public function indexAction()
     {
         $this->loadLayout();

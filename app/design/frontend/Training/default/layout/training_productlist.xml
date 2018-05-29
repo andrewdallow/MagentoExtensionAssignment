@@ -40,7 +40,7 @@
         <update handle="customer_account"/>
 
         <reference name="content">
-            <block name="customer.productlist" type="training_productlist/container"
+            <block name="customer.productlist" type="core/template"
                    template="productlist/container.phtml" as="productlist_container">
                 <action method="setTitle" translate="title">
                     <title>Recommended Products</title>
@@ -58,6 +58,12 @@
                     <action method="setToolbarBlockName">
                         <name>product_list_toolbar</name>
                     </action>
+                    <block name="training_productlist/grid" type="core/template"
+                           template="productlist/list/grid.phtml"
+                           as="productlist_grid"/>
+                    <block name="training_productlist/slider" type="core/template"
+                           template="productlist/list/slider.phtml"
+                           as="productlist_slider"/>
 
                 </block>
             </block>

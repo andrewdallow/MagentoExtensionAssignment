@@ -1,9 +1,7 @@
 <?php
 
 /**
- * Short description for class
- *
- * Long description for class (if any)...
+ * Product List Helper Class
  *
  * @category   Zend
  * @package    Zend_Training
@@ -18,6 +16,11 @@ class Training_ProductList_Helper_Data extends Mage_Core_Helper_Abstract
 {
     const XML_PATH_MAX_PRODUCTS_SHOWN = 'catalog/trianing_productlist_list/max_products_shown';
     
+    /**
+     * @param null $store
+     *
+     * @return mixed
+     */
     public function getMaxProductsShown($store = null)
     {
         return Mage::getStoreConfig(
