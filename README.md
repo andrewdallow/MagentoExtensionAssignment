@@ -76,7 +76,7 @@ writing a 'preDispatch' method in the Training_ProductList_IndexController class
 which checks if the user is logged on. 
 
 Training_ProductList_IndexController is also responsible for rendering the default
-index page. 
+index page of product-list. 
 
 #### Product List
 
@@ -89,7 +89,7 @@ parameters in the URI to determine the collection sort order.
 The display of the list is adapted from the Magento rwd_default theme.
 The template list.phtml can display products in either the default 'Grid'
 layout with template /List/grid.phtml or as a Slider with the /List/slider.phtml
-template. The slider uses the 3rd party javascript called Slick for the slider, 
+template. The slider uses the 3rd party javascript called Slick, 
 but is otherwise based on the grid format. 
 
 The Training_ProductList_Block_Toolbar Block for the product list has also 
