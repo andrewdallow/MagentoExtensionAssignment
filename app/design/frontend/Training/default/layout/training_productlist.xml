@@ -36,21 +36,29 @@
 
         </reference>
     </default>
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label"
+                    module="training_productlist">
+                <name>productlist</name>
+                <path>product-list/</path>
+                <label helper="training_productlist/getProductlistTitle"/>
+            </action>
+        </reference>
+    </customer_account>
     <training_productlist_index_index>
         <update handle="customer_account"/>
-
         <reference name="content">
             <block name="customer.productlist" type="core/template"
                    template="productlist/container.phtml" as="productlist_container">
                 <action method="setTitle" translate="title">
-                    <title>Recommended Products</title>
+                    <title helper="training_productlist/getProductlistTitle"/>
                 </action>
                 <reference name="customer_account_navigation">
                     <action method="setActive">
-                        <path>recommended_products</path>
+                        <path>product-list</path>
                     </action>
                 </reference>
-
                 <block name="customer.productlist.list" type="training_productlist/list"
                        template="productlist/list.phtml" as="productlist_list">
                     <block type="training_productlist/toolbar" name="product_list_toolbar"
@@ -64,20 +72,9 @@
                     <block name="training_productlist/slider" type="core/template"
                            template="productlist/list/slider.phtml"
                            as="productlist_slider"/>
-
                 </block>
             </block>
         </reference>
-
     </training_productlist_index_index>
-    <customer_account>
-        <reference name="customer_account_navigation">
-            <action method="addLink" translate="label"
-                    module="training_productlist">
-                <name>productlist</name>
-                <path>recommended_products/</path>
-                <label>Recommended Products</label>
-            </action>
-        </reference>
-    </customer_account>
+
 </layout>

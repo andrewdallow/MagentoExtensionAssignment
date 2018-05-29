@@ -15,6 +15,7 @@
 class Training_ProductList_Helper_Data extends Mage_Core_Helper_Abstract
 {
     const XML_PATH_MAX_PRODUCTS_SHOWN = 'catalog/trianing_productlist_list/max_products_shown';
+    const XML_PATH_PRODUCTLIST_TITLE = 'catalog/trianing_productlist_list/productlist_title';
     
     /**
      * @param null $store
@@ -27,4 +28,27 @@ class Training_ProductList_Helper_Data extends Mage_Core_Helper_Abstract
             self::XML_PATH_MAX_PRODUCTS_SHOWN, $store
         );
     }
+    
+    /**
+     * @param null $store
+     *
+     * @return mixed
+     */
+    public function getProductListTitle($store = null)
+    {
+        return Mage::getStoreConfig(self::XML_PATH_PRODUCTLIST_TITLE, $store);
+    }
+    
+    /**
+     * @param null $store
+     *
+     * @return mixed
+     */
+    public function getProductListUri($store = null)
+    {
+        $title = $this->getProductListTitle($store);
+        return str_replace(' ', '-', strtolower($title));
+    }
+    
+    
 }

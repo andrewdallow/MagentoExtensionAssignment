@@ -43,7 +43,7 @@
                 <use>standard</use>
                 <args>
                     <module>Training_ProductList</module>
-                    <frontName>recommended_products</frontName>
+                    <frontName>product-list</frontName>
                 </args>
             </training_productlist>
         </routers>
@@ -51,6 +51,7 @@
     <default>
         <catalog>
             <trianing_productlist_list>
+                <productlist_title>Recommended Products</productlist_title>
                 <max_products_shown>10</max_products_shown>
             </trianing_productlist_list>
         </catalog>

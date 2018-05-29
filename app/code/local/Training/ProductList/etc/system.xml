@@ -4,16 +4,24 @@
         <catalog module="catalog">
             <groups>
                 <trianing_productlist_list>
-                    <label>Recommended Products</label>
+                    <label>My Account Product List</label>
                     <sort_order>10</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <max_products_shown>
-                            <label>Number to List</label>
-                            <backend_model>training_productlist/numberToShowValidation</backend_model>
+                        <productlist_title>
+                            <label>Product List Title</label>
                             <sort_order>10</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </productlist_title>
+                        <max_products_shown>
+                            <label>Maximum Number of Products to List</label>
+                            <backend_model>training_productlist/numberToShowValidation</backend_model>
+                            <sort_order>20</sort_order>
                             <frontend_type>text</frontend_type>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
