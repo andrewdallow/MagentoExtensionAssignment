@@ -40,7 +40,7 @@ try {
             'type'             => 'int',
             'backend'          => '',
             'frontend'         => '',
-            'label'            => 'Recommended Product',
+            'label'            => 'Visible in Product List',
             'input'            => 'select',
             'class'            => '',
             'source'           => 'eav/entity_attribute_source_boolean',

@@ -1,8 +1,8 @@
 # Magento 1.9.x Training_ProductList Module 
 
 A Magento extension which displays a list of products chosen at the backend
-and displays them to any logged in customer in the My Account section of 
-the frontend. We call this list the Recommended Products list.
+to any logged in customer in the My Account section of 
+the frontend. 
 
 ## The handle_display Attribute
 
@@ -23,7 +23,7 @@ The backend user can set this property for any product by navigating in the
 
           Catalog | Manage Products | Edit [any product] | General
           
-One then selects Yes or No for the 'Recommended Product' option and then saves 
+One then selects Yes or No for the 'Visible in Product List' option and then saves 
 the product to set the value.
 
 The database is setup using the sql/training_productlist_setup/install-1.0.0.0.php script.
@@ -77,8 +77,8 @@ parameters in the URI to determine the collection sort order.
 The display of the list is adapted from the Magento rwd_default theme.
 The template list.phtml can display products in either the default 'Grid'
 layout with template /List/grid.phtml or as a Slider with the /List/slider.phtml
-template. The slider uses the 3rd party javascript called Slick for the slider, buts
-is otherwise based on the grid format. 
+template. The slider uses the 3rd party javascript called Slick for the slider, 
+but is otherwise based on the grid format. 
 
 The Training_ProductList_Block_Toolbar Block for the product list has also 
 been customised by extending the Mage_Catalog_Block_Product_List_Toolbar Block 
