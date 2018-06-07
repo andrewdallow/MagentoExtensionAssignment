@@ -36,22 +36,23 @@ try {
     
     $installer->addAttribute(
         $entityType, $attributeCode, array(
-            'group'            => 'General',
-            'type'             => 'int',
-            'backend'          => '',
-            'frontend'         => '',
-            'label'            => 'Visible in Product List',
-            'input'            => 'select',
-            'class'            => '',
-            'source'           => 'eav/entity_attribute_source_boolean',
-            'visible'          => true,
-            'required'         => false,
-            'user_defined'     => false,
-            'searchable'       => false,
-            'filterable'       => true,
-            'comparable'       => false,
-            'visible_on_front' => false,
-            'unique'           => false,
+            'group'                   => 'General',
+            'type'                    => 'int',
+            'backend'                 => '',
+            'frontend'                => '',
+            'label'                   => 'Visible in Product List',
+            'input'                   => 'select',
+            'class'                   => '',
+            'source'                  => 'eav/entity_attribute_source_boolean',
+            'visible'                 => true,
+            'required'                => false,
+            'user_defined'            => false,
+            'searchable'              => false,
+            'filterable'              => true,
+            'comparable'              => false,
+            'visible_on_front'        => false,
+            'unique'                  => false,
+            'used_in_product_listing' => true
         )
     );
     $installer->endSetup();

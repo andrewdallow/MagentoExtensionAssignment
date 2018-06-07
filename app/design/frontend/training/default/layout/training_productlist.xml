@@ -66,12 +66,6 @@
                     <action method="setToolbarBlockName">
                         <name>product_list_toolbar</name>
                     </action>
-                    <block name="training_productlist/grid" type="core/template"
-                           template="productlist/list/grid.phtml"
-                           as="productlist_grid"/>
-                    <block name="training_productlist/slider" type="core/template"
-                           template="productlist/list/slider.phtml"
-                           as="productlist_slider"/>
                 </block>
             </block>
         </reference>

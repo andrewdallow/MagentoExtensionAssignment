@@ -23,8 +23,11 @@ class Training_ProductList_Block_Toolbar
     protected function _construct()
     {
         parent::_construct();
-        $this->_orderField = Mage::getStoreConfig(
-            Mage_Catalog_Model_Config::XML_PATH_LIST_DEFAULT_SORT_BY
+        $this->_orderField = 'name';
+        $this->_availableOrder = array(
+            'updated_at' => Mage::helper('catalog')->__('New'),
+            'name'       => Mage::helper('catalog')->__('Name'),
+            'price'      => Mage::helper('catalog')->__('Price')
         );
         // Set viewing options
         $this->_availableMode = array('grid'   => $this->__('Grid'),

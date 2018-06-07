@@ -49,7 +49,8 @@ class Training_ProductList_Block_List extends Mage_Catalog_Block_Product_List
      *
      * @return mixed
      */
-    private function _getRecommendedProductList(Mage_Catalog_Model_Product $model,
+    private function _getRecommendedProductList(
+        $model,
         $numProductsToShow
     ) {
         return $model
